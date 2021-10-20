@@ -38,8 +38,13 @@ code {
   border: 0 solid none;
 }
 
+.app {
+  background-color: slategrey;
+}
+
 .song-list {
   background-color: cadetblue;
+  width: 100%;
 }
 
 .play-list {

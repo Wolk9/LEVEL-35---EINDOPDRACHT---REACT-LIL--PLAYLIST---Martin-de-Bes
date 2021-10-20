@@ -4,7 +4,8 @@ const InputField = (props) => {
   return (
     <div className="input-field flex-item">
       <form>
-        <input></input>
+        <label for={props.label}>{props.label}</label>
+        <input id={props.label} name={props.label} type={props.type}></input>
       </form>
     </div>
   );

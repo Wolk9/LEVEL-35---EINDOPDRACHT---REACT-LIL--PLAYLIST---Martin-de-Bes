@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./App.css";
 import InputForm from "./components/InputForm";
 import SongList from "./components/SongList";
 
@@ -12,7 +11,7 @@ function App() {
   const rating = useSelector((state) => state.rating);
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>WINC's Lil' Playlist</h1>
       <InputForm />
       <SongList />
