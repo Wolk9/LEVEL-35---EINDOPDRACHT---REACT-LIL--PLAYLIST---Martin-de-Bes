@@ -19,10 +19,11 @@ export const editGenre = (e) => {
     payload: e
   };
 };
-export const editRating = (e) => {
+
+export const editRating = (value) => {
   return {
     type: "RATING",
-    payload: e
+    payload: value
   };
 };
 
@@ -32,3 +33,8 @@ export const editSong = (e) => {
     payload: e
   };
 };
+
+export const updateInput = (key, input) => ({
+  type: "UPDATE_INPUT",
+  payload: { key, input }
+});

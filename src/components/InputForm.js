@@ -8,9 +8,9 @@ const InputForm = (props) => {
       <InputField label="Title" type="text" />
       <InputField label="Artist" type="text" />
       <InputField label="Genre" type="list" />
-      <RatingField label="Rating" type="range" />
+      <RatingField label="Rating" type="number" />
       <div className="input-field flex-item">
-        <button>new</button>
+        <button>+</button>
       </div>
     </div>
   );

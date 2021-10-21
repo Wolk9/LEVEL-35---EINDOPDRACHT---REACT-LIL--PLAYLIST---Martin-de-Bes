@@ -1,5 +1,13 @@
 const songReducer = (
-  state = [{ title: "", artist: "", genre: "", rating: 1 }],
+  state = [
+    {
+      id: 10839247817,
+      title: "Cream",
+      artist: "Prince",
+      genre: "Pop",
+      rating: 4
+    }
+  ],
   action
 ) => {
   switch (action.type) {
@@ -10,6 +18,7 @@ const songReducer = (
     case "GENRE":
       return state.genre;
     case "RATING":
+      console.log(...state, state.rating);
       return state.rating;
     default:
       return state;
