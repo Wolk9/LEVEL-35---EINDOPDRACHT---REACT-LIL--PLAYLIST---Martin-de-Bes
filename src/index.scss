@@ -47,21 +47,24 @@ code {
 
 .song-list {
   background-color: cadetblue;
-  width: ;
 }
 
 .play-list {
   background-color: lightgrey;
 }
 
-button {
+.addButton {
   width: 100px;
   height: 25px;
   margin: 5px;
-  background-color: midnightblue;
+  background-color: green;
   color: whitesmoke;
   border-radius: $borderradius;
   border: 1px solid darkgray;
+}
+
+.disabled {
+  background-color: red;
 }
 
 .rating {

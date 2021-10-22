@@ -5,10 +5,8 @@ import SongList from "./components/SongList";
 
 function App() {
   const song = useSelector((state) => state.song);
-  const title = useSelector((state) => state.title);
-  const artist = useSelector((state) => state.artist);
-  const genre = useSelector((state) => state.genre);
-  const rating = useSelector((state) => state.rating);
+
+  console.log(song);
 
   return (
     <div className="app">

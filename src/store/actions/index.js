@@ -27,14 +27,10 @@ export const editRating = (value) => {
   };
 };
 
-export const editSong = (e) => {
+export const addSong = (value) => {
+  console.log("addSong action", value);
   return {
     type: "SONG",
-    payload: e
+    payload: value
   };
 };
-
-export const updateInput = (key, input) => ({
-  type: "UPDATE_INPUT",
-  payload: { key, input }
-});
