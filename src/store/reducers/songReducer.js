@@ -1,20 +1,20 @@
-const songReducer = (
-  state = [
-    {
-      id: 0,
-      title: "",
-      artist: "",
-      genre: "",
-      rating: 1
-    }
-  ],
-  action
-) => {
+import { ADD_SONG } from "../types/songTypes";
+
+const initialState = [
+  {
+    id: 0,
+    title: "",
+    artist: "",
+    genre: "",
+    rating: 1
+  }
+];
+const songReducer = (state = initialState, action) => {
   console.log("songReducer", state, action);
   switch (action.type) {
-    case "SONG":
+    case ADD_SONG:
       console.log("action songReducer case SONG");
-      return action.payload;
+      return [...state], action.payload;
     default:
       console.log("action songReducer case default");
       return state;

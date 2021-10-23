@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { useSelector } from "react-redux";
 
 const SongList = (props) => {
@@ -13,10 +14,10 @@ const SongList = (props) => {
 const Record = (record) => {
   return (
     <div className="flex-container play-list">
-      <div className="flex-item">{record.title}</div>
-      <div className="flex-item">{record.artist}</div>
-      <div className="flex-item">{record.genre}</div>
-      <div className="flex-item">{record.rating}</div>
+      <div className="flex-item">titel: {record.title}</div>
+      <div className="flex-item">artiest: {record.artist}</div>
+      <div className="flex-item">genre: {record.genre}</div>
+      <div className="flex-item">rating: {record.rating}</div>
     </div>
   );
 };
@@ -42,4 +43,12 @@ const Rows = () => {
   return <div>{recordList}</div>;
 };
 
-export default SongList;
+const mapStateToProps = (state) => {
+  return { song: state.song };
+};
+
+const mapDispatchToProp = (dispatch) => {
+  return { addSong: () => dispatch() };
+};
+
+export default connect(mapStateToProps, mapDispatchToProp)(SongList);
