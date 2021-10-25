@@ -9,3 +9,5 @@ const titleReducer = (state = "", action) => {
 };
 
 export default titleReducer;
+
+// dit is even een aanpassing
